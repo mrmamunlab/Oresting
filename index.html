@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>স্মার্ট অর্ডার টুল</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      height: 60px;
+    }
+    .sub-header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    .spotlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    .card img {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #69ab42;
+    }
+    .download {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .download img {
+      height: 60px;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    #more-solutions {
+      display: none;
+      margin-top: 20px;
+    }
+    .show-button {
+      background-color: #69ab42;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="your-logo.png" alt="Logo">
+</header>
+<div class="sub-header">
+  <h1>স্মার্ট অর্ডার টুলস</h1>
+  <p>আপনার রেস্টুরেন্টের জন্য আধুনিক, ঝামেলামুক্ত ও সময় সাশ্রয়ী অর্ডার ব্যবস্থাপনা</p>
+</div>
+
+<section class="spotlights">
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/qr-code.png" alt="QR">
+    <h3>QR Menu অর্ডার</h3>
+    <p>কাস্টমার নিজের ফোন থেকেই অর্ডার করবে। ওয়েটারের উপর চাপ কমবে, অর্ডার মিস হবে না।</p>
+  </div>
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/table.png" alt="table">
+    <h3>টেবিল অনুযায়ী ট্র্যাকিং</h3>
+    <p>প্রতিটি টেবিলের অর্ডার স্ট্যাটাস আলাদা দেখা যাবে – রান্না চলছে না সার্ভড হয়েছে।</p>
+  </div>
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/kitchen-room.png" alt="kitchen">
+    <h3>রান্নাঘরের ডিসপ্লে</h3>
+    <p>স্টাফরা অর্ডার ডিসপ্লেতে দেখতে পাবে – লিখে নিতে হবে না। ঝামেলা কমবে, গতি বাড়বে।</p>
+  </div>
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/user.png" alt="client">
+    <h3>গ্রাহক ফিডব্যাক</h3>
+    <p>লাইভ রিভিউ ও অভিযোগের তথ্য রিয়েল টাইমে দেখা যাবে, কাস্টমার সন্তুষ্টি সহজেই বোঝা যাবে।</p>
+  </div>
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/waiter.png" alt="waiter">
+    <h3>ওয়েটার কল</h3>
+    <p>কাস্টমার চাইলে শুধু ক্লিক করেই ওয়েটার ডাকতে পারবে – হালকা সংকেত যাবে স্টাফদের কাছে।</p>
+  </div>
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/discount.png" alt="bonus">
+    <h3>ফিডেলিটি বোনাস</h3>
+    <p>নিয়মিত কাস্টমারদের পছন্দ ও ভিজিট হিসেব করে পুরস্কার দেওয়া যাবে।</p>
+  </div>
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/invisible.png" alt="hide">
+    <h3>স্টক হাইড ফিচার</h3>
+    <p>যা নেই, তা গ্রাহক দেখবে না। ওয়েটারকে “নেই ভাই” বলতে হবে না, কাস্টমারও হতাশ হবে না।</p>
+  </div>
+
+</section>
+
+<button class="show-button" onclick="document.getElementById('more-solutions').style.display='block'; this.style.display='none';">
+  আরো solutions দেখুন
+</button>
+
+<section id="more-solutions" class="spotlights">
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/rocket.png" alt="upsell boost">
+    <h3>Instant Upsell Boost</h3>
+    <p>প্রিম্পটেড সাজেশন দিয়ে প্রতি অর্ডারে +৭–১০% অতিরিক্ত আয়—অর্ডার প্লেসড, আয় বাড়ল!</p>
+    <p><strong>বিস্তারিত:</strong> গ্রাহক যখন অর্ডার করবেন, তখন স্বয়ংক্রিয়ভাবে আরও কিছু প্রাসঙ্গিক আইটেমের সাজেশন আসবে যা রিপিট সেল ও আয় বাড়াবে।</p>
+  </div>
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/edit-property.png" alt="seasonal">
+    <h3>Cost Saving Unlimited Menu Update</h3>
+    <p>ঈদ / স্পেশাল উৎসব সিজন উপলক্ষে কিংবা নিজস্ব অফার দিতে কয়েক ক্লিকেই unlimited menu আপডেট। প্রিন্ট ডিজাইনের খরচ ছাড়াই বছরে ৭০০০–১০০০০৳ সাশ্রয়।</p>
+  </div>
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/graph-report.png" alt="repeat customer">
+    <h3>বারবার আগত গ্রাহক বিশ্লেষণ</h3>
+    <p>কে কি খায়, কতবার আসে – বিশ্লেষণ করে গ্রাহককে টার্গেট করে অফার দেওয়া যাবে।</p>
+  </div>
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/dashboard.png" alt="owner dashboard">
+    <h3>Owner Dashboard</h3>
+    <p>রিয়েল টাইমে অর্ডার, টেবিল, কিচেন ও ওয়েটার স্টেটাস—all in one view। চায়ের চুমুকে পরিচালনা!</p>
+  </div>
+
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/like.png" alt="favourite">
+    <h3>Favourite First</h3>
+    <p>রিপিটেড কাস্টমারের প্রিয় আইটেম মেনুর শুরুতেই – উন্নত অভিজ্ঞতা, সেলের সম্ভাবনা দ্বিগুণ।</p>
+  </div>
+
+</section>
+
+<section class="download">
+  <p><strong>ডাউনলোড করুন অ্যাপটি</strong></p>
+  <a href="https://play.google.com/store/apps/details?id=your.package.name" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store">
+  </a>
+</section>
+
+<footer>
+  &copy; 2025 স্মার্ট অর্ডার টুলস | তৈরি করেছেন আপনার সাথে থাকা টিম
+</footer>
+
+</body>
+</html>
 
