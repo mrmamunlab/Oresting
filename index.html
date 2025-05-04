@@ -1,186 +1,179 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>স্মার্ট অর্ডারিং টুল</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>স্মার্ট অর্ডার টুলস</title>
+
+  <!-- Bangla Stylish Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   <style>
+    :root {
+      --primary: #4caf50;
+      --felt: #2e3a2e;
+      --secondary: #69ab42;
+      --accent: #7ed957;
+      --bg-light: #f5fdf5;
+      --card-bg: #ffffff;
+      --text-dark: #333333;
+      --shadow: rgba(0,0,0,0.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9f9;
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      text-align: center;
+      line-height: 1.6;
     }
     header {
-      background: white;
-      padding: 20px;
-      text-align: center;
+      background-color: white;
+      padding: 40px 20px 20px;
+      color: var(--text-dark);
+      box-shadow: 0 2px 6px var(--shadow);
     }
-    header img {
-      height: 60px;
+    header img { height: 60px; margin-bottom: 10px; }
+    header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0;
     }
-    .sub-header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
+    header h1 .green { color: var(--primary); font-weight: 700; }
+    header h1 .felt { color: var(--felt); font-weight: 400; }
+    header p {
       font-size: 18px;
+      margin-top: 8px;
+      color: #555;
     }
     .spotlights {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 30px;
+      gap: 24px;
+      padding: 40px 20px;
     }
     .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px var(--shadow);
       padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
     }
-    .card img {
-      height: 50px;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+    .card i {
+      font-size: 48px;
+      color: var(--secondary);
       margin-bottom: 10px;
     }
     .card h3 {
-      margin-bottom: 10px;
-      color: #69ab42;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--secondary);
+      margin: 10px 0;
     }
+    .card p {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .show-button {
+      background-color: var(--secondary);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: background-color 0.3s ease;
+    }
+    .show-button:hover {
+      background-color: var(--accent);
+    }
+    #more-solutions { display: none; }
     .download {
       text-align: center;
-      margin: 40px 0;
+      padding: 40px 20px;
     }
     .download img {
       height: 60px;
+      filter: drop-shadow(0 2px 4px var(--shadow));
     }
     footer {
-      text-align: center;
+      background-color: var(--card-bg);
+      padding: 20px;
       font-size: 14px;
       color: #555;
-      margin-bottom: 20px;
-    }
-    #more-solutions {
-      display: none;
-      margin-top: 20px;
-    }
-    .show-button {
-      background-color: #69ab42;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 20px auto;
-      display: block;
+      box-shadow: 0 -2px 6px var(--shadow);
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Logo">
+  <img src="your-logo.png" alt="Logo">
+  <h1><span class="green">স্মার্ট</span> <span class="felt">অর্ডার টুলস</span></h1>
+  <p>আধুনিক, ঝামেলামুক্ত অর্ডার ব্যবস্থা নিয়ে একটি সমাধান টুলস</p>
 </header>
-<div class="sub-header">
-  <h1>স্মার্ট অর্ডারিং টুলস</h1>
-  <p>আপনার রেস্টুরেন্টের জন্য আধুনিক, ঝামেলামুক্ত ও লাভজনক অর্ডার ব্যবস্থাপনা</p>
-</div>
 
 <section class="spotlights">
-
   <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/qr-code.png" alt="QR">
+    <i class="fas fa-qrcode"></i>
     <h3>QR Menu অর্ডার</h3>
-    <p>কাস্টমার নিজের ফোন থেকেই অর্ডার করবে। ওয়েটারের উপর চাপ কমবে, অর্ডার মিস হবে না।</p>
+    <p>কাস্টমার নিজের ফোন থেকে অর্ডার করবে। ওয়েটারের ঊপর চাপ কমবে।</p>
   </div>
-
   <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/table.png" alt="table">
-    <h3>টেবিল অনুযায়ী ট্র্যাকিং</h3>
-    <p>প্রতিটি টেবিলের অর্ডার স্ট্যাটাস আলাদা দেখা যাবে – রান্না চলছে না সার্ভড হয়েছে।</p>
+    <i class="fas fa-chair"></i>
+    <h3>টেবিল উনুযায়ী ট্র্যাকিং</h3>
+    <p>প্রতিটি টেবিলের অর্ডার স্টেটাস একদেশে পরীক্ষা জাবে।</p>
   </div>
-
   <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/kitchen-room.png" alt="kitchen">
+    <i class="fas fa-tv"></i>
     <h3>রান্নাঘরের ডিসপ্লে</h3>
-    <p>স্টাফরা অর্ডার ডিসপ্লেতে দেখতে পাবে – লিখে নিতে হবে না। ঝামেলা কমবে, গতি বাড়বে।</p>
+    <p>লিখে নিতে হবে না, সীধা পেওনা জাবে ডিসপ্লেতে।</p>
   </div>
-
   <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/user.png" alt="client">
+    <i class="fas fa-comment-dots"></i>
     <h3>গ্রাহক ফিডব্যাক</h3>
-    <p>লাইভ রিভিউ ও অভিযোগের তথ্য রিয়েল টাইমে দেখা যাবে, কাস্টমার সন্তুষ্টি সহজেই বোঝা যাবে।</p>
+    <p>লাইভ ফিডব্যাক ও অভিজোগের তথ্য রিয়েল টাইমে।</p>
   </div>
-
-  <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/waiter.png" alt="waiter">
-    <h3>ওয়েটার কল</h3>
-    <p>কাস্টমার চাইলে শুধু ক্লিক করেই ওয়েটার ডাকতে পারবে – হালকা সংকেত যাবে স্টাফদের কাছে।</p>
-  </div>
-
-  <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/discount.png" alt="bonus">
-    <h3>ফিডেলিটি বোনাস</h3>
-    <p>নিয়মিত কাস্টমারদের পছন্দ ও ভিজিট হিসেব করে পুরস্কার দেওয়া যাবে।</p>
-  </div>
-
-  <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/invisible.png" alt="hide">
-    <h3>স্টক হাইড ফিচার</h3>
-    <p>যা নেই, তা গ্রাহক দেখবে না। ওয়েটারকে “নেই ভাই” বলতে হবে না, কাস্টমারও হতাশ হবে না।</p>
-  </div>
-
 </section>
 
-<button class="show-button" onclick="document.getElementById('more-solutions').style.display='block'; this.style.display='none';">
-  আরো solutions দেখুন
-</button>
+<button class="show-button" onclick="document.getElementById('more-solutions').style.display='grid'; this.style.display='none';">আরো solutions দেখুন</button>
 
 <section id="more-solutions" class="spotlights">
-
   <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/rocket.png" alt="upsell boost">
+    <i class="fas fa-bolt"></i>
     <h3>Instant Upsell Boost</h3>
-    <p>প্রিম্পটেড সাজেশন দিয়ে প্রতি অর্ডারে +৭–১০% অতিরিক্ত আয়—অর্ডার প্লেসড, আয় বাড়ল!</p>
-    <p><strong>বিস্তারিত:</strong> গ্রাহক যখন অর্ডার করবেন, তখন স্বয়ংক্রিয়ভাবে আরও কিছু প্রাসঙ্গিক আইটেমের সাজেশন আসবে যা রিপিট সেল ও আয় বাড়াবে।</p>
+    <p>প্রিম্পটেড সাজেশন দিয়ে প্রতি অর্ডারে +৭–১০% আয়।</p>
   </div>
-
   <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/edit-property.png" alt="seasonal">
+    <i class="fas fa-pen-nib"></i>
     <h3>Cost Saving Unlimited Menu Update</h3>
-    <p>ঈদ / স্পেশাল উৎসব সিজন উপলক্ষে কিংবা নিজস্ব অফার দিতে কয়েক ক্লিকেই unlimited menu আপডেট। প্রিন্ট ডিজাইনের খরচ ছাড়াই বছরে ৭০০০–১০০০০৳ সাশ্রয়।</p>
+    <p>অফার এবং একটি ক্লিকের মাধ্যমে।</p>
   </div>
-
   <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/graph-report.png" alt="repeat customer">
+    <i class="fas fa-user-check"></i>
     <h3>বারবার আগত গ্রাহক বিশ্লেষণ</h3>
-    <p>কে কি খায়, কতবার আসে – বিশ্লেষণ করে গ্রাহককে টার্গেট করে অফার দেওয়া যাবে।</p>
+    <p>কী কি খায়, কত বার এসে তার্গেট করা হবে।</p>
   </div>
-
-  <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/dashboard.png" alt="owner dashboard">
-    <h3>Owner Dashboard</h3>
-    <p>রিয়েল টাইমে অর্ডার, টেবিল, কিচেন ও ওয়েটার স্টেটাস—all in one view। চায়ের চুমুকে পরিচালনা!</p>
-  </div>
-
-  <div class="card">
-    <img src="https://img.icons8.com/ios-filled/50/like.png" alt="favourite">
-    <h3>Favourite First</h3>
-    <p>রিপিটেড কাস্টমারের প্রিয় আইটেম মেনুর শুরুতেই – উন্নত অভিজ্ঞতা, সেলের সম্ভাবনা দ্বিগুণ।</p>
-  </div>
-
 </section>
 
 <section class="download">
-  <p><strong>ডাউনলোড করুন অ্যাপগুলো</strong></p>
-  <a href="https://play.google.com/store/apps/details?id=your.package.name" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store">
-  </a>
+  <p><strong>ডাউনলোড করুন এপ্পটি</strong></p>
+  <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store"></a>
 </section>
 
 <footer>
-  &copy; 2025 all right reserved by Oresting স্মার্ট অর্ডারিং টুলস্ | developed with passion...
+  &copy; 2025 স্মার্ট অর্ডার টুলস | তৈরি করেছেন একটি টিম
 </footer>
 
 </body>
 </html>
-
