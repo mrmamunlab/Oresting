@@ -83,58 +83,114 @@
         </div>
     </section>
 
-    <!-- প্রাইসিং কার্ড -->
-    
-  <section class="py-20 px-4">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- প্রাইসিং কার্ড -->  
 
-      <!-- Free Plan -->
-      <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-l-4 border-green-400">
-        <h3 class="text-2xl font-semibold text-green-800 mb-4">Free Plan</h3>
-        <ul class="space-y-3 text-gray-700 mb-6">
-          <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>১৫টি মেনু আইটেম</li>
-          <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>৮০ অর্ডার/মাস</li>
-          <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>বেসিক স্টক কন্ট্রোল</li>
-          <li class="flex items-center"><i class="fas fa-times-circle text-red-400 mr-2"></i>নোটিফিকেশন নেই</li>
-        </ul>
-        <button class="w-full py-3 rounded-xl bg-gradient-to-r from-green-400 to-teal-500 text-white font-medium shadow-md hover:from-green-500 hover:to-teal-600 transition-colors">
-          শুরু করুন
-        </button>
+ <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Toggle Buttons -->
+      <div class="flex justify-center mb-12 space-x-8">
+        <button data-mode="monthly" class="tab-btn text-green-600 font-bold">মাসিক</button>
+        <button data-mode="yearly" class="tab-btn text-gray-600">বার্ষিক</button>
       </div>
 
-      <!-- Pro Plan (6 মাস ফ্রি) – Recommended -->
-      <div class="relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 scale-105 border-2 border-emerald-500">
-        <span class="absolute -top-3 right-4 bg-emerald-500 text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow">
-          Recommended
-        </span>
-        <h3 class="text-2xl font-semibold text-emerald-700 mb-4">Pro Plan (6 মাস ফ্রি)</h3>
-        <ul class="space-y-3 text-gray-800 mb-6">
-          <li class="flex items-center"><i class="fas fa-infinity text-green-500 mr-2"></i>আনলিমিটেড আইটেম</li>
-          <li class="flex items-center"><i class="fas fa-robot text-green-500 mr-2"></i>AI সাজেশন ও বিশ্লেষণ</li>
-          <li class="flex items-center"><i class="fas fa-cash-register text-green-500 mr-2"></i>POS সংযোগ</li>
-          <li class="flex items-center"><i class="fas fa-headset text-green-500 mr-2"></i>প্রিমিয়াম সাপোর্ট</li>
-        </ul>
-        <p class="text-sm text-gray-600 mb-4">
-          কার্ড যোগ করার দরকার নেই, কোনো চার্জ করা হবে না ৬ মাস শেষ হলেও, আপনার ইচ্ছেমত প্রয়োজনে পরে যেকোনো প্ল্যান কিনতে পারবেন, সেবার মান ভালো বিবেচনা করলে।
-        </p>
-        <button class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-medium shadow-md hover:from-emerald-600 hover:to-teal-700 transition-colors">
-          ফ্রি ব্যবহার করুন
-        </button>
-      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-      <!-- Growth Lite -->
-      <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-l-4 border-green-300">
-        <h3 class="text-2xl font-semibold text-green-800 mb-4">Growth Lite</h3>
-        <ul class="space-y-3 text-gray-700 mb-6">
-          <li class="flex items-center"><i class="fas fa-list-ul text-green-500 mr-2"></i>৫০টি মেনু আইটেম</li>
-          <li class="flex items-center"><i class="fas fa-sync-alt text-green-500 mr-2"></i>৩০০ অর্ডার/মাস</li>
-          <li class="flex items-center"><i class="fas fa-bell text-green-500 mr-2"></i>WhatsApp নোটিফিকেশন</li>
-          <li class="flex items-center"><i class="fas fa-qrcode text-green-500 mr-2"></i>ব্র্যান্ডেড QR</li>
-        </ul>
-      </div>
+        <!-- Free Plan -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-l-4 border-green-400 flex flex-col">
+          <h3 class="text-2xl font-semibold text-green-800 mb-4">Free Plan</h3>
+          <div class="mb-4">
+            <span class="price monthly text-3xl font-bold text-green-700">০৳/মাস</span>
+            <span class="price yearly hidden text-3xl font-bold text-green-700">০৳/বছর</span>
+          </div>
+          <ul class="space-y-2 text-gray-700 mb-6">
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-mobile-alt text-green-500 mr-2"></i>কোনো অ্যাপ প্রয়োজন নেই</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-boxes text-green-500 mr-2"></i>স্টক শেষে আইটেম অটো লুকানো</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-clipboard-list text-green-500 mr-2"></i>অর্ডার স্ট্যাটাস ট্র্যাকিং ("প্রস্তুত হচ্ছে" / "রেডি")</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-user-clock text-green-500 mr-2"></i>গ্রাহক আচরণ লগ (ব্রাউজার-ভিত্তিক)</li>
+            <li class="flex items-center"><i class="fas fa-times-circle text-red-400 mr-2"></i><i class="fas fa-bolt text-red-400 mr-2"></i>রিয়েল-টাইম মেনু আপডেট</li>
+            <li class="flex items-center"><i class="fas fa-times-circle text-red-400 mr-2"></i><i class="fas fa-magic text-red-400 mr-2"></i>পার্সোনালাইজড সাজেশন</li>
+            <li class="flex items-center"><i class="fas fa-times-circle text-red-400 mr-2"></i><i class="fas fa-star text-red-400 mr-2"></i>প্রিয় আইটেম আগে দেখানো</li>
+          </ul>
+          <div class="mt-auto">
+            <button class="w-full py-3 rounded-xl bg-gradient-to-r from-green-400 to-teal-500 text-white font-medium shadow-md hover:from-green-500 hover:to-teal-600 transition-colors">শুরু করুন</button>
+            <ul class="mt-4 text-gray-600 text-sm space-y-1">
+              <li class="flex items-center"><i class="fas fa-boxes mr-2"></i>১৫টি আইটেম</li>
+              <li class="flex items-center"><i class="fas fa-shopping-basket mr-2"></i>৮০ অর্ডার বা ৳১০,০০০ টার্নওভার</li>
+            </ul>
+          </div>
+        </div>
 
+        <!-- Growth Pro (6 মাস ফ্রি) – Recommended -->
+        <div class="relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 scale-105 border-2 border-emerald-500 flex flex-col">
+          <span class="absolute -top-3 right-4 bg-emerald-500 text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow">Recommended</span>
+          <h3 class="text-2xl font-semibold text-emerald-700 mb-4">Growth Pro (6 মাস ফ্রি)</h3>
+          <div class="mb-4">
+            <span class="price monthly text-3xl font-bold text-emerald-700 line-through">৫০০৳/মাস</span>
+            <span class="price yearly hidden text-3xl font-bold text-emerald-700 line-through">৫০০০৳/বছর</span>
+          </div>
+          <ul class="space-y-2 text-gray-800 mb-6">
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-layer-plus text-green-500 mr-2"></i>ফ্রি ও গ্রোথ লাইটের সবকিছু +</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-magic text-green-500 mr-2"></i>পার্সোনালাইজড সাজেশন ("আপনি এগুলোও পছন্দ করতে পারেন")</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-star text-green-500 mr-2"></i>প্রিয় আইটেম আগে দেখানো</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-infinity text-green-500 mr-2"></i>আনলিমিটেড আইটেম ও স্ক্যান</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-robot text-green-500 mr-2"></i>AI assist মেনু ম্যানেজমেন্ট</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-chart-line text-green-500 mr-2"></i>Real time analytics সম্পূর্ন ডাসবোর্ড</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-image text-green-500 mr-2"></i>ম‍্যনুতে নিজস্ব লগো এবং রঙ</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-qrcode text-green-500 mr-2"></i>ব্রান্ডেড QR</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fab fa-whatsapp text-green-500 mr-2"></i>অর্ডার রেডি, দেরি, বাতিল করলে WhatsApp notification</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-envelope text-green-500 mr-2"></i>email/WhatsApp সাপোর্ট</li>
+          </ul>
+          <ul class="text-gray-600 text-sm mb-4">
+            <li class="flex items-center"><i class="fas fa-infinite-loop mr-2"></i>সীমা: নেই। অনাগত নতুন সকল advance ফিচারের আনলিমিটেড ব্যবহার।</li>
+          </ul>
+          <p class="text-sm text-gray-600 mb-4">কার্ড যোগ করার দরকার নেই, কোনো চার্জ করা হবে না ৬ মাস শেষ হলেও, আপনার ইচ্ছেমত প্রয়োজনে পরে যেকোনো প্ল্যান কিনতে পারবেন, সেবার মান ভালো বিবেচনা করলে।</p>
+          <button class="mt-auto w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-medium shadow-md hover:from-emerald-600 hover:to-teal-700 transition-colors">ফ্রি সেবা নিন</button>
+        </div>
+
+        <!-- Growth Lite -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-l-4 border-green-300 flex flex-col">
+          <h3 class="text-2xl font-semibold text-green-800 mb-4">Growth Lite</h3>
+          <div class="mb-4">
+            <span class="price monthly text-3xl font-bold text-green-700">২০০৳/মাস</span>
+            <span class="price yearly hidden text-3xl font-bold text-green-700">২০০০৳/বছর</span>
+          </div>
+          <ul class="space-y-2 text-gray-700 mb-6">
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-layer-plus text-green-500 mr-2"></i>ফ্রি প্ল্যানের সবকিছু +</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-sync-alt text-green-500 mr-2"></i>রিয়েল-টাইম মেনু আপডেট</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-boxes text-green-500 mr-2"></i>৫০টি আইটেম পর্যন্ত সাপোর্ট</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-chart-bar text-green-500 mr-2"></i>বেসিক সীমিত গ্রাহক-অর্ডার flow analytics ডাসবোর্ড</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-image text-green-500 mr-2"></i>ম‍্যনুতে নিজস্ব লগো এবং রঙ</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-qrcode text-green-500 mr-2"></i>ব্রান্ডেড QR</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fab fa-whatsapp text-green-500 mr-2"></i>অর্ডার রেডি, দেরি, বাতিল করলে WhatsApp notification</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><i class="fas fa-envelope text-green-500 mr-2"></i>email/WhatsApp সাপোর্ট</li>
+            <li class="flex items-center"><i class="fas fa-times-circle text-red-400 mr-2"></i><i class="fas fa-magic text-red-400 mr-2"></i>পার্সোনালাইজড সাজেশন</li>
+            <li class="flex items-center"><i class="fas fa-times-circle text-red-400 mr-2"></i><i class="fas fa-star text-red-400 mr-2"></i>প্রিয় আইটেম আগে দেখানো</li>
+          </ul>
+          <ul class="text-gray-600 text-sm mt-auto">
+            <li class="flex items-center"><i class="fas fa-shopping-basket mr-2"></i>৩০০ অর্ডার বা ৳৫০,০০০ টার্নওভার</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </section>
+
+  <script>
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const mode = btn.dataset.mode;
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.toggle('text-green-600', b === btn);
+          b.classList.toggle('text-gray-600', b !== btn);
+          b.classList.toggle('font-bold', b === btn);
+        });
+        document.querySelectorAll('.price.monthly').forEach(el => el.classList.toggle('hidden', mode !== 'monthly'));
+        document.querySelectorAll('.price.yearly').forEach(el => el.classList.toggle('hidden', mode !== 'yearly'));
+      });
+    });
+    document.querySelector('.tab-btn[data-mode="monthly"]').click();
+  </script>
 
     <!-- তুলনা টেবিল -->
     <section class="container mx-auto px-4 py-16">
